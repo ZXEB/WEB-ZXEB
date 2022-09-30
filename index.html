@@ -30,3 +30,20 @@
 <img src="http://imgcache.qq.com/club-photo/vip/ariel/qqvip/reb/vip_1.png">
  <color=red>测试</color>
 <p>到底了，别划了
+<h3>每日一言</h3>
+<div id="hitokoto" class="hhh">
+  <span id="hitokoto">:D 获取中...</span> ——<span id="from"></span>
+<script>
+  var xhr = new XMLHttpRequest();
+  xhr.open('get', 'https://v1.hitokoto.cn/?c=b');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      var data = JSON.parse(xhr.responseText);//获得字符串形式的响应数据。
+      var hitokoto = document.getElementById('hitokoto');
+	  var fromm=document.getElementById("from")
+	  fromm.innerText=data.from;
+      hitokoto.innerText = data.hitokoto;
+    }
+  }
+  xhr.send();
+</script>

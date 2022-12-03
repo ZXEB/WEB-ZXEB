@@ -1,33 +1,100 @@
-<images>
-<image>
-<startdate>20221202</startdate>
-<fullstartdate>202212020800</fullstartdate>
-<enddate>20221203</enddate>
-<url>/th?id=OHR.MiamiDT_ZH-CN3528760113_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp</url>
-<urlBase>/th?id=OHR.MiamiDT_ZH-CN3528760113</urlBase>
-<copyright>迈阿密海滩海洋大道，美国佛罗里达州 (© Matteo Colombo/Getty Images)</copyright>
-<copyrightlink>https://www.bing.com/search?q=%E8%BF%88%E9%98%BF%E5%AF%86%E6%B5%B7%E6%BB%A9%E6%B5%B7%E6%B4%8B%E5%A4%A7%E9%81%93&form=hpcapt&mkt=zh-cn</copyrightlink>
-<headline>在艺术天堂追逐夏天</headline>
-<drk>1</drk>
-<top>1</top>
-<bot>1</bot>
-<hotspots/>
-</image>
-<tooltips>
-<loadMessage>
-<message>正在加载...</message>
-</loadMessage>
-<previousImage>
-<text>上一个图像</text>
-</previousImage>
-<nextImage>
-<text>下一个图像</text>
-</nextImage>
-<play>
-<text>播放视频</text>
-</play>
-<pause>
-<text>暂停视频</text>
-</pause>
-</tooltips>
-</images>
+<style type="text/css">
+.wiiuii-suiji-main span{color:#fff}.wiiuii-suiji-main{background-size:cover;background-repeat:no-repeat;background-position:center center;cursor:pointer;height:320px;border-radius:var(--main-radius);position:relative}.wiiuii-suiji-header{display:flex;justify-content:space-between}.xingyu-dt-ty{padding:20px;display:flex;flex-direction:column}.xingyu-dt-day{font-size:60px;font-weight:700;color:#fff}.xingyu-sj-date{font-size:16px;font-weight:700;color:#fff}.xingyu-sjzt-ty{line-height:25px;height:200px;writing-mode:vertical-rl;padding:15px;color:#fff;font-size:15px}.xingyu-sj-qhbtn{position:absolute;bottom:30px;padding:10px}.xingyu-sj-qhbtn>span>i{font-size:16px}.xingyu-sj-qhbtn span:hover{color:#f44336}.xingyu-sjtitle-ty{position:absolute;bottom:0;text-align:center;left:0;right:0;bottom:0;padding:5px}
+</style>
+<div class="wiiuii-suiji-main">
+<div class="wiiuii-suiji-header">
+<div class="xingyu-dt-ty">
+<span class="xingyu-dt-day wiiuiiDay"></span>
+<p class="xingyu-sj-date">
+<span class="wiiuiiYear"></span>
+<span class="wiiuiiMonth"></span>
+</p>
+</div>
+<div class="xingyu-sjzt-ty">
+<span class="xingyu-yiyin"></span>
+</div>
+</div>
+<div class="xingyu-sj-qhbtn">
+<span id="xingyu-qh-btn"
+><i class="fa fa-paper-plane" aria-hidden="true"></i> 换一句</span
+>
+</div>
+<div class="xingyu-sjtitle-ty">
+<span>——截止——</span>
+</div>
+</div>
+<script
+type="text/javascript"
+src="https://www.wiiuii.cn/cdn/js/yiyin-img.js"
+></script>
+/**
+*
+*本代码有星语（wiiuii.cn）独立完成！
+*
+*/
+var wiiuiiYiYan = [
+'休对故人思故国，且将新火试新茶。诗酒趁年华。——宋苏轼《望江南》',
+'山中何事？松花酿酒，春水煎茶。——元张可久《人月圆》',
+'最是人间留不住，朱颜辞镜花辞树。——清·王国维《蝶恋花》',
+'正是江南好风景，落花时节又逢君。——唐·杜甫《江南逢李龟年》',
+'醉后不知天在水，满船清梦压星河。——元·唐温如《题龙阳县青草湖》',
+'纸屏石枕竹方床，手倦抛书午梦长。——宋蔡确《夏日登车盖亭》',
+'曾是惊鸿照影来。——宋陆游《沈园二首》',
+'人生天地间，忽如远行客。——汉佚名《古诗十九首》',
+'直道相思了无益，未妨惆怅是清狂。——唐·李商隐《无题》',
+'秋风生渭水，落叶满长安。——唐·贾岛《忆江上吴处士》',
+'一愿郎君千岁，二愿妾身常健。——唐冯延巳《长命女》',
+'雾失楼台，月迷津渡。桃源望断无寻处。——宋秦观《踏莎行郴州旅舍》',
+'独立小楼风满袖，平林新月人归后。——南唐冯延巳《鹊踏枝》',
+'晓看天色暮看云，行也思君，坐也思君。——明唐寅《一剪梅》',
+'叹息老来交旧尽，睡来谁共午瓯茶。——宋陆游《幽居初夏》',
+'客散酒醒深夜后，更持红烛赏残花。——唐李商隐《花下醉》',
+'柴门闻犬吠，风雪夜归人。——唐·刘长卿《逢雪宿芙蓉山主人》',
+'庭院深深深几许，杨柳堆烟，帘幕无重数。——宋欧阳修《蝶恋花》',
+'有约不来过夜半，闲敲棋子落灯花。——宋赵师秀《约客》',
+'满目山河空念远，落花风雨更伤春。不如怜取眼前人。——宋晏殊《浣溪沙》'
+]
+var wiiuiiYiYanBg = [
+'https://img.wiiuii.cn/yiyin/1.png',
+'https://img.wiiuii.cn/yiyin/2.png',
+'https://img.wiiuii.cn/yiyin/3.png',
+'https://img.wiiuii.cn/yiyin/4.png',
+'https://img.wiiuii.cn/yiyin/5.png',
+'https://img.wiiuii.cn/yiyin/6.png',
+'https://img.wiiuii.cn/yiyin/7.png',
+'https://img.wiiuii.cn/yiyin/8.png',
+'https://img.wiiuii.cn/yiyin/9.png',
+'https://img.wiiuii.cn/yiyin/10.png',
+'https://img.wiiuii.cn/yiyin/11.png'
+]
+var wiiuiiYiMain = document.querySelector(".wiiuii-suiji-main"),
+wiuiSjMain = wiiuiiYiMain.parentNode.parentNode,
+date = new Date(),
+wiiuiiMonth = date.getMonth() + 1,
+wiiuiiDay = date.getDate();
+document.querySelector(".wiiuiiYear").innerHTML = date.getFullYear() + "年";
+10 > wiiuiiMonth
+? (document.querySelector(".wiiuiiMonth").innerHTML =
+"0" + wiiuiiMonth + "月")
+: (document.querySelector(".wiiuiiMonth").innerHTML = wiiuiiMonth + "月");
+10 > wiiuiiMonth &&
+(document.querySelector(".wiiuiiDay").innerHTML = "0" + wiiuiiDay);
+wiuiSjMain.style.padding = "0";
+var wiiuiiYyRanBtn = document.querySelector("#xingyu-qh-btn"),
+wiiuiiYiYinTextBox = document.querySelector(".xingyu-yiyin");
+function wiiuiiRanYiYin() {
+var a = Math.floor(Math.random() * wiiuiiYiYanBg.length);
+wiiuiiYiYinTextBox.innerHTML =
+wiiuiiYiYan[Math.floor(Math.random() * wiiuiiYiYan.length)];
+wiiuiiYiMain.style.backgroundImage = "url(" + wiiuiiYiYanBg[a] + ")";
+}
+wiiuiiRanYiYin();
+wiiuiiYyRanBtn.onclick = function () {
+wiiuiiRanYiYin();
+};
+wiiuiiYiYinTextBox.onclick = function () {
+var a = document
+.querySelector(".xingyu-yiyin")
+.textContent.split("。")[0];
+open("https://so.gushiwen.cn/search.aspx?value=" + a);
+};

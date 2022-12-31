@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>烟花</title>
+<style>
+body {
+  background: black;
+}
+
+.firework {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: #FFF;
+  border-radius: 50%;
+  animation: spark 0.3s linear infinite;
+}
+
+@keyframes spark {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<script>
+let fireworkCount = 100;
+
+for (let i = 0; i < fireworkCount; i++) {
+  let firework = document.createElement('div');
+  firework.className = 'firework';
+  firework.style.left = Math.random() * window.innerWidth + 'px';
+  firework.style.top = window.innerHeight + 'px';
+  document.body.appendChild(firework);
+}
+</script>
+
+</body>
+</html>
